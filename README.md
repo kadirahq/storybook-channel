@@ -2,6 +2,12 @@
 
 Storybook Channel is similar to an EventEmitter. Channels are used with Storybook implementations to send/receive events between the Storybook Manager and the Storybook Renderer.
 
+--- 
+
+**This repo has been deprecated because it's now included in https://github.com/storybooks/storybook**
+
+---
+
 ```
 Channel {
   addListener(type, listener)
