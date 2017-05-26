@@ -1,41 +1,9 @@
 # Storybook Channel
 
-Storybook Channel is similar to an EventEmitter. Channels are used with Storybook implementations to send/receive events between the Storybook Manager and the Storybook Renderer.
+This contents of this repo was moved to the [Storybook monorepo](https://github.com/storybooks/storybook/) and the NPM package name has been changed.
 
---- 
+- The old name of the package was: **@kadira/storybook-channel**
+- The new name of the package is: **@storybook/channels**
+- The location of the code is: https://github.com/storybooks/storybook/tree/master/lib/channels
 
-**This repo has been deprecated because it's now included in https://github.com/storybooks/storybook**
-
----
-
-```
-Channel {
-  addListener(type, listener)
-  emit(type, ...args)
-  eventNames()
-  listenerCount(type)
-  listeners(type)
-  on(type, listener)
-  once(type, listener)
-  prependListener(type, listener)
-  prependOnceListener(type, listener)
-  removeAllListeners(type)
-  removeListener(type, listener)
-}
-```
-
-The channel takes a Transport object as a parameter which will be used to send/receive messages. The transport object should implement this interface.
-
-```
-Transport {
-  send(event)
-  setHandler(handler)
-}
-```
-
-Currently, channels are baked into storybook implementations and therefore this module is not designed to be used directly by addon developers. When developing addons, use the `getChannel` method exported by `@kadira/storybook-addons` module. For this to work, Storybook implementations should use the `setChannel` method before loading addons.
-
-```js
-import addons from '@kadira/storybook-addons'
-const channel = addons.getChannel()
-```
+The repo you're looking at now is out of date and no longer maintained.
